@@ -7,6 +7,13 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+/**
+ * @author  Lavi Vainer
+ * @version 1.0
+ * @since   17/11/2026
+ *
+ * Logic handling for the game itself (giving points to red and blue).
+ */
 public class MainActivity extends AppCompatActivity implements View.OnLongClickListener {
 private Button btnBlue, btnRed, btnWinners;
 private int countBlue, countRed;
@@ -32,6 +39,10 @@ private final int POINTS = 2;
         btnRed.setOnLongClickListener(this);
 
         btnWinners.setOnClickListener(new View.OnClickListener() {
+            /**
+             * Sends the player and the points to the Winners screen.
+             * @param view The view (in this case, the button) which was clicked
+             */
             @Override
             public void onClick(View view) {
 
@@ -48,8 +59,9 @@ private final int POINTS = 2;
     }
 
     /**
-     * @param view the view which was clicked
-     * @return
+     * Adds two points to red when the player long clicks the red button.
+     *
+     * @param view The view (in this case, the button) which was clicked
      */
     @Override
     public boolean onLongClick(View view) {

@@ -12,6 +12,13 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+/**
+ * @author  Lavi Vainer
+ * @version 1.0
+ * @since   17/11/2026
+ *
+ * Displaying the results of the game and the winner.
+ */
 public class Winners extends AppCompatActivity {
 private Button btnRestart;
 private TextView tvRed, tvBlue;
@@ -31,6 +38,10 @@ private Intent gi;
         tvBlue = findViewById(R.id.tvBlue);
 
         btnRestart.setOnClickListener(new View.OnClickListener() {
+            /**
+             * Send the player back to the Main screen and start a new round.
+             * @param view The view (in this case, button) which was clicked.
+             */
             @Override
             public void onClick(View view) {
                 finish();
