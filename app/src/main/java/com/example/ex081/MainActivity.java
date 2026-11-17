@@ -19,6 +19,7 @@ private final int POINTS = 2;
 
         btnBlue = findViewById(R.id.btnBlue);
         btnRed = findViewById(R.id.btnRed);
+        btnWinners = findViewById(R.id.btnWinners);
         countBlue = 0; countRed = 0;
 
         btnBlue.setOnClickListener(new View.OnClickListener() {
