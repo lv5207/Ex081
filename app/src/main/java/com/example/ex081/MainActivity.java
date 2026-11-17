@@ -33,10 +33,15 @@ private final int POINTS = 2;
         btnWinners.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                // send data to winners screen via intent
                 Intent si = new Intent(MainActivity.this, Winners.class);
                 si.putExtra("blue", countBlue);
                 si.putExtra("red", countRed);
                 startActivity(si);
+
+                // reset counts following intent finish
+                countRed = 0; countBlue = 0;
             }
         });
     }
