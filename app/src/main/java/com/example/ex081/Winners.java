@@ -29,7 +29,7 @@ private Intent gi;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_winners);
 
-        Intent gi = getIntent();
+        gi = getIntent();
         int blue = gi.getIntExtra("blue", 0);
         int red = gi.getIntExtra("red", 0);
 

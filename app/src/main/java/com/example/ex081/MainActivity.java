@@ -32,7 +32,7 @@ private final int POINTS = 2;
         btnBlue.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                countBlue += 2;
+                countBlue += POINTS;
             }
         });
 
@@ -65,7 +65,7 @@ private final int POINTS = 2;
      */
     @Override
     public boolean onLongClick(View view) {
-        countRed += 2;
-        return false;
+        countRed += POINTS;
+        return true;
     }
 }
