@@ -17,7 +17,6 @@ import androidx.appcompat.app.AppCompatActivity;
 public class MainActivity extends AppCompatActivity implements View.OnLongClickListener {
 private Button btnBlue, btnRed, btnWinners;
 private int countBlue, countRed;
-private final int POINTS = 2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +31,7 @@ private final int POINTS = 2;
         btnBlue.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                countBlue += POINTS;
+                countBlue += 1;
             }
         });
 
@@ -41,6 +40,7 @@ private final int POINTS = 2;
         btnWinners.setOnClickListener(new View.OnClickListener() {
             /**
              * Sends the player and the points to the Winners screen.
+             *
              * @param view The view (in this case, the button) which was clicked
              */
             @Override
@@ -65,7 +65,7 @@ private final int POINTS = 2;
      */
     @Override
     public boolean onLongClick(View view) {
-        countRed += POINTS;
+        countRed += 2;
         return true;
     }
 }
